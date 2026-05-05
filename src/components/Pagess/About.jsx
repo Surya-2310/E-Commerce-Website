@@ -1,7 +1,7 @@
 import React from 'react'
 import Aboutpic from '../../assets/aboutpic.png'
 import Fullservices from '../../assets/Fullservices.png'
-import employee from '../../assets/founder.png'
+import employee from '../../assets/profile.png'
 
 function About() {
   return (
@@ -22,26 +22,25 @@ function About() {
 
           <p className="small-text">
             Exclusive has more than 1 Million products to offer, growing at a 
-            very fast rate.
+            very fast rate. Exclusive offers a diverse assortment in categories 
+            ranging from consumer.
           </p>
-
-          <p>MADE IN INDIA ❤️</p>
+          <p> MADE IN INDIA❤️</p>
         </div>
 
         <div className="about-image">
-          <img src={Aboutpic} alt="About" />
+          <img src={Aboutpic}  />
         </div>
 
       </div>
 
       <div className="about-services">
-        <img src={Fullservices} alt="Services" />
+        <img src={Fullservices}  />
       </div>
-
-      <div className="about-employee">
-        <img src={employee} alt="" />
-      </div>
-
+           
+           <div className="about-employee">
+            <img src={employee} alt="" />
+           </div>
     </div>
   )
 }
