@@ -127,7 +127,7 @@ function Signup() {
           <img src={imagecart} alt="" />
         </div>
 
-      <form className="signpage" onSubmit={check}>
+      <form className="signpage" onSubmit={check} autoComplete="off">
 
 
         <h1>Create An Account</h1>
@@ -136,7 +136,7 @@ function Signup() {
         <div className="email">
 
           <label>Email address</label>
-          <input type="email" value={email}onChange={handleemail}className="form-control"/>
+          <input type="email" value={email}onChange={handleemail}className="form-control" autoComplete="new-email"/>
         </div>
 
         {emailError && (<p style={{ color: "red" }}> {emailError}</p>)}
@@ -144,7 +144,7 @@ function Signup() {
         <div className="pass1">
           <label>Password</label>
 
-          <input type="password"value={password} onChange={checkpass1}className="form-control"/>
+          <input type="password"value={password} onChange={checkpass1}className="form-control" autoComplete="new-password"/>
         </div>
 
         {empty && (
