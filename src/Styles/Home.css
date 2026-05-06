@@ -75,7 +75,7 @@
 }
 
 .product-card:hover {
-  transform: translateY(-8px);
+
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
@@ -121,8 +121,14 @@
   margin-bottom: 10px;
 }
 
+.homebtn{
+ display: flex;
+ gap: 10px;
+ margin-top: 10px;
+  
+}
 
-.addtocart {
+.addtocart,.Buynowbtn {
   width: 100%;
   padding: 10px;
   background: #db4444;
@@ -132,9 +138,15 @@
   cursor: pointer;
   transition: 0.3s;
 }
-
+.addtocart{
+  background-color: rgb(43, 43, 43);
+}
 .addtocart:hover {
-  background: #b93333;
+  background: #100f0f;
+}
+.Buynowbtn:hover{
+    background: #b93333;
+
 }
 
 
@@ -200,29 +212,64 @@
   width: 100%;
   border-radius:10px;
 }
+
 .flash-sale {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px 20px;
   margin: 20px 0;
+  border-radius: 10px;
+  border-left: 14px solid rgb(251, 105, 105);
+  width: 50%;
+  border-right: 14px solid rgb(248, 100, 100);
+
 }
+
+
+.flash-sale h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #e60023;
+
+}
+
 
 .timer {
   display: flex;
   gap: 20px;
+  /* padding-right: 60%; */
+  
 }
 
+
 .timer div {
+  background: #e6e0e0;
+  color: #060606;
+  padding: 10px 15px;
+  border-radius: 8px;
   text-align: center;
+  min-width: 70px;
+  /* padding-left: 20%; */
+
 }
 
 .timer p {
   font-size: 12px;
-  color: gray;
+ color: black;
   margin-bottom: 5px;
 }
 
+
 .timer h3 {
   font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.ended {
+  color: red;
+  font-size: 18px;
   font-weight: bold;
 }

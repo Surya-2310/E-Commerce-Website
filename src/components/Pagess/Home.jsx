@@ -13,7 +13,28 @@ import service from '../../assets/Fullservices.png'
 function Home() {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
+    const [timeLeft, setTimeLeft] = useState(10800);
   const navigate = useNavigate();
+
+ useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => Math.max(prev - 1, 0));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  
+  const formatTime = (sec) => {
+    const h = String(Math.floor(sec / 3600)).padStart(2, "0");
+    const m = String(Math.floor((sec %3600) / 60)).padStart(2, "0");
+    const s = String(sec % 60).padStart(2, "0");
+    return { h, m, s };
+  };
+
+  const time = formatTime(timeLeft);           
+
+
 
   useEffect(() => {
     axios.get("http://localhost:3000/product")
@@ -66,7 +87,7 @@ function Home() {
   return (
     <div className="home-container">
       <ToastContainer/>
-
+      
     <div className="hero-section">
 
  
@@ -89,7 +110,28 @@ function Home() {
   </div>
 
 </div>
+   <div className="flash-sale">
+        <h2> Flash Sale</h2>
 
+        {timeLeft === 0 ? (
+          <h3 className="ended">Sale Ended</h3>
+        ) : (
+          <div className="timer">
+            <div>
+              <p>Hours</p>
+              <h3>{time.h}</h3>
+            </div>
+            <div>
+              <p>Minutes</p>
+              <h3>{time.m}</h3>
+            </div>
+            <div>
+              <p>Seconds</p>
+              <h3>{time.s}</h3>
+            </div>
+          </div>
+        )}
+      </div>
       <h1 className="main-title">Our Products</h1>
       
       <div className="search-section">
@@ -119,10 +161,10 @@ function Home() {
                 <p className="product-price">₹ {product.price}</p>
 
                  <img src={Star} alt="" />
-
-                <button className="addtocart" onClick={() => handleAddToCart(product)}> <i className="bi bi-cart-check"></i>Add to Cart</button>
-                {/* <button className="Buynow" onClick={()=> Buynow(product)}>Buynow</button> */}
-
+                <div className="homebtn">
+                <button className="addtocart" onClick={() => handleAddToCart(product)}> <i className="bi bi-cart-check"></i>Cart</button>
+                <button className="Buynowbtn" onClick={()=> Buynow(product)}>Buynow</button>
+               </div>
               </div>
               
             </div>
