@@ -26,11 +26,11 @@ function Home() {
 
   
   const formatTime = (sec) => {
-    const d = String(Math.floor(sec / (24 * 3600))).padStart(2,"0");
+    const t = String(Math.floor(sec / (24 * 3600))).padStart(2,"0");
   const h = String(Math.floor((sec % (24 * 3600)) / 3600)).padStart(2, "0");   
      const m = String(Math.floor((sec %3600) / 60)).padStart(2, "0");
     const s = String(sec % 60).padStart(2, "0");
-    return { h, m, s,d };
+    return { h, m, s,t };
   };
 
   const time = formatTime(timeLeft);
@@ -121,7 +121,7 @@ function Home() {
             
             <div>
               <p>day</p>
-              <h3>{time.d}</h3>
+              <h3>{time.t}</h3>
             </div>
             <div>
               <p>Hours</p>
