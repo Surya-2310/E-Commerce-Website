@@ -1,0 +1,29 @@
+{
+  "product": [
+    {
+      "id": "vy6wvwbg_c4",
+      "name": "fan",
+      "price": 566,
+      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD"
+    },
+    {
+      "id": "b-pHN5_JbHY",
+      "name": "headphone",
+      "price": 600,
+      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD"
+    },
+    {
+      "id": "qT__8NqCC_w",
+      "name": "Drone",
+      "price": 2500,
+      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD"
+    },
+    {
+      "id": "nP5PIkRZVcg",
+      "name": "clock",
+      "price": 500,
+      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD"
+    }
+  ],
+  "orders": []
+}
