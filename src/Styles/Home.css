@@ -1,7 +1,7 @@
 
 .home-container {
   padding: 30px 60px;
-  background: #f9f9f9;
+  background: #ffffff;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -220,7 +220,7 @@
   background: #ffffff;
   padding: 15px 20px;
   margin: 20px 0;
-  border-radius: 10px;
+  border-radius: 20px;
   border-left: 14px solid rgb(251, 105, 105);
   width: 55%;
   border-right: 14px solid rgb(248, 100, 100);
@@ -241,7 +241,7 @@
 .timer {
   display: flex;
   gap: 20px;
-  /* padding-right: 60%; */
+ 
   
 }
 
@@ -259,7 +259,7 @@
 }
 
 .timer p {
-  font-size: 12px;
+  font-size: 17px;
  color: black;
   margin-bottom: 5px;
   font-weight: bold;
@@ -267,8 +267,8 @@
 
 
 .timer h3 {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: bolder;
   letter-spacing: 1px;
 }
 
@@ -277,3 +277,4 @@
   font-size: 18px;
   font-weight: bold;
 }
+
