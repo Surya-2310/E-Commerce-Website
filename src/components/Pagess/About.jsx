@@ -2,7 +2,7 @@ import React from 'react'
 import Aboutpic from '../../assets/aboutpic.png'
 import Fullservices from '../../assets/Fullservices.png'
 import employee from '../../assets/founder.png'
-
+import ui from '../../assets/ui.jpg'
 function About() {
   return (
     <div className="about-container">
@@ -37,7 +37,22 @@ function About() {
       <div className="about-services">
         <img src={Fullservices}  />
       </div>
-           
+           <div className='about2-servies'>
+           <div className='ui-left'>
+            <img src={ui} alt="" />
+           </div>
+           <div className='text-right'>
+            <p>
+
+              Our products are designed with high quality, modern style, and customer satisfaction in mind.
+               We provide fast and secure delivery to ensure products reach customers safely and on time.
+                Customers can enjoy easy online shopping, affordable prices, trusted payment options, and 
+                excellent support services.
+                 Our goal is to give every customer a smooth shopping experience with reliable
+                  products and quick delivery benefits.
+            </p>
+           </div>
+           </div>
            <div className="about-employee">
             <img src={employee} alt="" />
            </div>

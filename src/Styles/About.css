@@ -58,3 +58,29 @@
   max-width: 900px;
   border-radius: 10px;
 }
+.about2-servies{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.ui-left{
+  flex: 1;
+}
+
+.ui-left img{
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.text-right{
+  flex: 1;
+  color: #555;
+  line-height: 1.8;
+  font-weight: 600;
+  font-size: 16px;
+}

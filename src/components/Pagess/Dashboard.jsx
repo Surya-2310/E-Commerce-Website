@@ -36,11 +36,12 @@ const [Totalsalesamount,setTotalsalesamount] = useState(0);
       
         data.forEach((order) => {
 
-          chart.push([order.name,order.price]);
+          chart.push([order.name,order.total]);
 
     setChartData(chart);
+    console.log(chart)
 
-           totalamont += order.price;
+           totalamont += order.total;
 
         });
 
@@ -91,13 +92,7 @@ const [Totalsalesamount,setTotalsalesamount] = useState(0);
     height="500px"
     data={chartData}
   />
- <Chart className="columcharts"
-    chartType="ColumnChart"
-     width="600px"
-    height="500px"
-    data={chartData}
-  />
-
+ 
   </>
 
 </div>
