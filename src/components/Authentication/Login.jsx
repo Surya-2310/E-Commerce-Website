@@ -122,7 +122,7 @@ return (
     
       <div className="login-right">
 
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleLogin} autoComplete="off">
 
           <h1 className="login-h1">Log in to Smart Shopy</h1> 
           <p className="login-h1">Enter your details below</p><br />
@@ -134,7 +134,7 @@ return (
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="form-input"
-              autoComplete="off"
+                 autoComplete="new-email"
             />
           </div>
 
@@ -145,7 +145,7 @@ return (
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="form-input"
-              autoComplete="off"
+              autoComplete="new-password"
             />
           </div>
 
