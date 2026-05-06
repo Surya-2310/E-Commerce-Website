@@ -9,7 +9,7 @@ function Orders() {
   const [order, setOrder] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/orders")
+    axios.get("https://smartshop-api-oas7.onrender.com/orders")
       .then((res) => setOrder(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -18,7 +18,7 @@ function Orders() {
 
   function handleDelete(id) {
 
-  axios.delete(`http://localhost:3000/orders/${id}`)
+  axios.delete(`https://smartshop-api-oas7.onrender.com/orders/${id}`)
     .then(() => {setOrder(order.filter((item) => item.id !== id));
 
       toast.success("Order successfully cancelled",{

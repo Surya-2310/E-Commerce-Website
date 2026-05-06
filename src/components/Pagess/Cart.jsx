@@ -16,7 +16,7 @@ function Cart() {
 
   function fetchCart() {
 
-    axios .get("http://localhost:3000/cart")
+    axios .get("https://smartshop-api-oas7.onrender.com/cart")
       .then((res) => {
 
         const data = res.data.map((item) => ({...item, quantity: item.quantity || 1 }));
@@ -32,7 +32,7 @@ function Cart() {
   function increaseQty(item) {
 
     axios.patch(
-      `http://localhost:3000/cart/${item.id}`,
+      `https://smartshop-api-oas7.onrender.com/cart/${item.id}`,
       {
         quantity: item.quantity + 1
       }
@@ -46,8 +46,7 @@ function Cart() {
 
     if (item.quantity === 1) return;
 
-    axios.patch(
-      `http://localhost:3000/cart/${item.id}`,
+    axios.patch(`https://smartshop-api-oas7.onrender.com/cart/${item.id}`,
       {
         quantity: item.quantity - 1
       }
@@ -57,8 +56,8 @@ function Cart() {
 
   function removeItem(id) {
 
-    axios.delete(`http://localhost:3000/cart/${id}`)
-      .then(fetchCart);
+axios.delete(`https://smartshop-api-oas7.onrender.com/cart/${id}`)      
+  .then(fetchCart);
 
   }
 

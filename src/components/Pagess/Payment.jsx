@@ -42,7 +42,7 @@ const qrValue = `upi://pay?pa=suryaseetharaman0@okhdfcbank&pn=SmartShopy&am=${am
       status: "Placed"
     };
 
-    axios.post("http://localhost:3000/orders", orderData)
+    axios.post("https://smartshop-api-oas7.onrender.com/orders", orderData)
       .then(() => {
 
        celebrate();

@@ -60,7 +60,7 @@ function AddProduct() {
       image
     };
 
-    axios.post("http://localhost:3000/product", newProduct)
+    axios.post("https://smartshop-api-oas7.onrender.com/product", newProduct)
       .then(() => {
        toast.success("Product added successfully!",{
         autoClose:1000

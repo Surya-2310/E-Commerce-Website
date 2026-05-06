@@ -38,7 +38,7 @@ function Home() {
 
 
   useEffect(() => {
-    axios.get("http://localhost:3000/product")
+    axios.get("https://smartshop-api-oas7.onrender.com/product")
       .then((res) => {
         setProducts(res.data);
       })
@@ -54,7 +54,7 @@ function Home() {
     return;
   }
 
-  axios.post("http://localhost:3000/cart", product)
+ axios.post("https://smartshop-api-oas7.onrender.com/cart",product)
 
     .then(() => {
 

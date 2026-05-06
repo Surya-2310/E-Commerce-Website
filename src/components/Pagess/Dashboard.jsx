@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Chart } from "react-google-charts";
 import { useNavigate } from "react-router-dom";
+import Orders from './Orders';
 
 function Dashboard() {
 
@@ -19,7 +20,7 @@ const [Totalsalesamount,setTotalsalesamount] = useState(0);
   
   useEffect(() => {
 
-    axios.get("http://localhost:3000/orders")
+    axios.get("https://smartshop-api-oas7.onrender.com/orders")
       .then((res) => {
 
         const data = res.data;
@@ -53,7 +54,7 @@ const [Totalsalesamount,setTotalsalesamount] = useState(0);
 
   useEffect(() => {
 
-  axios.get("http://localhost:3000/product")
+  axios.get("https://smartshop-api-oas7.onrender.com/product")
 
 
     .then((res) => {
