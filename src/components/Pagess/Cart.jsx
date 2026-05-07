@@ -147,7 +147,7 @@ axios.delete(`https://smartshop-api-oas7.onrender.com/cart/${id}`)
 
       )}
 
-      {/* Summary */}
+   
 
       <div className="cart-summary">
 
