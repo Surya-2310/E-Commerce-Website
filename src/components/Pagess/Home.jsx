@@ -8,7 +8,9 @@ import { toast, ToastContainer } from "react-toastify";
 import Frame740 from '../../assets/Frame740.png'
 import Star from '../../assets/Star.png'
 import service from '../../assets/Fullservices.png'
-
+import product4 from '../../assets/product4.png'
+import product3 from '../../assets/product3.png'
+import product2 from '../../assets/frame2.png'
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -188,6 +190,17 @@ function Home() {
                 <img src={Frame740} alt="frame" />
               </div>
 
+              <div className="bottom-product4">
+                <img src={product4}alt="" />
+              </div>
+
+               <div className="bottom-product3">
+                <img src={product3}alt="" />
+              </div>
+
+            <div className="bottom-frame1">
+                <img src={product2}alt="" />
+              </div>
               <div className="bottom-service">
                 <img src={service} alt="" />
               </div>

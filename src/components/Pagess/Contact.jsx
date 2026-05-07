@@ -1,9 +1,38 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 function Contact() {
+
+  const [text,settext]=useState("")
+   const [email,setemail]=useState("")
+    const [phone,setphone]=useState("")
+   
+    const [Message,setmessage]=useState("")
+
+  function handlemessage(){
+
+    if(!text||!phone||!Message||!email){
+      toast.error("Fill the all filed",{
+        autoClose:500,
+        position:"top-center"
+      })
+      return
+    } 
+
+ toast.success("our message has been sent successfully",{
+      autoClose:500,
+      position:"top-center"  
+    })
+    setemail(""),
+      setmessage(""),
+      settext(""),
+      setphone("")
+  
+    
+  }
   return (
     <div className="contact-container">
+      <ToastContainer/>
 
       <div className="contact-box">
 
@@ -29,14 +58,14 @@ function Contact() {
         <div className="contact-right">
 
           <div className="form-row">
-            <input type="text" placeholder="Your Name *" />
-            <input type="email" placeholder="Your Email *" />
-            <input type="text" placeholder="Your Phone *" />
+            <input type="text" placeholder="Your Name *" value={text} onChange={(e)=>settext(e.target.value)} />
+            <input type="email" placeholder="Your Email *" value={email} onChange={(e)=>setemail(e.target.value)} />
+            <input type="text" placeholder="Your Phone *" value={phone} onChange={(e)=>setphone(e.target.value)}/>
           </div>
 
-          <textarea placeholder="Your Message"></textarea>
+          <textarea placeholder="Your Message" value={Message} onChange={(e)=>setmessage(e.target.value)}></textarea>
 
-          <button className="send-btn">Send Message</button>
+          <button className="send-btn" onClick={()=>handlemessage()}>Send Message</button>
 
         </div>
 

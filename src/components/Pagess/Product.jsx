@@ -101,7 +101,7 @@ function AddProduct() {
   <br />
 
  
-  <button type="submit" className="submit-btn"> Upload Product</button>
+  <button type="submit" className="submit-btn">  Product</button>
  <ToastContainer/>
 </form>
 
