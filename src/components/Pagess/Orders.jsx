@@ -1,7 +1,7 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import computing from '../../assets/computing.png';
-import { Bounce, toast, ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 
 function Orders() {
@@ -56,11 +56,11 @@ function Orders() {
 
           <div key={item.id} className="order-card" >
 
-            <img src={item.items[0]?.image ||computing}   className="order-image" />
+            <img src={item.items?.[0]?.image ||computing}   className="order-image" />
 
                 <div className="order-details">
 
-        <h3 className="order-product"> {item.product} </h3>
+        <h3 className="order-product"> {item.items?.[0]?.name || "No Product"} </h3>
 
           <p className="order-text">Date:{item.date}</p>
 
@@ -70,7 +70,7 @@ function Orders() {
 
         <p className="order-text"> Address: {item.address} </p>
 
-        <p className="order-text">Quantity: {item.items[0]?.quantity}</p>
+        <p className="order-text">Quantity: {item.items?.[0]?.quantity}</p>
 
       <p className="order-total"> Total: ₹{item.total} </p>
  </div>
