@@ -51,7 +51,7 @@ function Navbar() {
    
 
         <div className="dropdown">
-          
+
           <ul>
             <div className="cart-notife">
             <li> <Link to="/Cart"><i className="bi bi-cart-check"> 
@@ -78,8 +78,7 @@ function Navbar() {
 
                  {role === "Admin" && (
             
-                 <li> <Link to="/Dashboard"> Dashboard</Link> </li>
-            
+                 <li> <Link to="/Dashboard"> Dashboard</Link> </li> 
               )}         
                 <Link to="/" onClick={() => { handleLogout(); setShow(false); }}>
                   Logout
