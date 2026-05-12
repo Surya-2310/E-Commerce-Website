@@ -2,18 +2,18 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import MainLayout from "./MainLayout.jsx";
 
-import Home from "../Home/Home.jsx";
-import Login from "../Authentication/Login/Login.jsx";
-import Signup from "../Authentication/Signup.jsx";
-import Buynow from "../Buynow/Buynow.jsx";
-import Orders from "../Order/Orders.jsx";
-import Dashboard from "../Dashboard/Dashboard.jsx";
-import AddProduct from "../AddProduct/Product.jsx";
-import QRgenerator from "../payment/Payment.jsx";
-import Cart from "../Cart/Cart.jsx";
-import About from '../About/About.jsx';
-import Contact from '../contact/Contact.jsx';
-import NotFound from '../Notfound/Notfound.jsx';
+import Home from "../components/Home/Home.jsx";
+import Login from "../Authentiction/Login/Login.jsx";
+import Signup from "../Authentiction/Signup/Signup.jsx";
+import Buynow from "../components/Buynow/Buynow.jsx";
+import Orders from "../components/Order/Orders.jsx";
+import Dashboard from "../components/Dashboard/Dashboard.jsx";
+import AddProduct from "../components/AddProduct/Product.jsx";
+import QRgenerator from "../components/payment/Payment.jsx";
+import Cart from "../components/Cart/Cart.jsx";
+import About from '../components/About/About.jsx';
+import Contact from '../components/contact/Contact.jsx';
+import NotFound from '../components/Notfound/Notfound.jsx';
 
 function Routes() {
 

@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import './Navbar.css'
 
@@ -7,19 +7,16 @@ function Navbar() {
 
   const navigate = useNavigate();
 
-
   const [show, setShow] = useState(false);
-  const [cartshow,setcartshow] = useState([]);
+  const [total, setTotal] = useState(0);
 
-
+  useEffect(() => {
     axios.get("https://smartshop-api-oas7.onrender.com/cart")
-    .then((res) => {setcartshow(res.data)})
-     .catch((err)=>{console.log(err)})
-
-
-    const total = cartshow.length;
-
-    console.log(total);
+      .then((res) => {
+        setTotal(res.data.length);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   function Dropdowns() {
     setShow(!show);

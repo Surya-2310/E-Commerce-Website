@@ -8,7 +8,7 @@ import './Dasboard.css'
 function Dashboard() {
 
 
-  const [chartData, setChartData] = useState("");
+  const [chartData, setChartData] = useState([]);
 
   const [totalProducts, setTotalProducts] = useState(0);
 
@@ -29,27 +29,19 @@ const [Totalsalesamount,setTotalsalesamount] = useState(0);
         setTotalOrders(data.length);
 
 
-        let totalamont =0;
+        let totalamont = 0;
 
-        
         const chart = [["Customer", "Amount"]];
 
-      
         data.forEach((order) => {
-
-          chart.push([order.name,order.total]);
-
-    setChartData(chart);
-    console.log(chart)
-
-           totalamont += order.total;
-
+          chart.push([order.name, order.total]);
+          totalamont += order.total;
         });
 
-
-        setTotalsalesamount(totalamont);
-        console.log(totalamont)
         setChartData(chart);
+        setTotalsalesamount(totalamont);
+        console.log(chart);
+        console.log(totalamont);
 
       })
   }, []);

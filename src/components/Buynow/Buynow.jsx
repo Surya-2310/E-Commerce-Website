@@ -1,4 +1,3 @@
-import { use } from "react";
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
@@ -29,17 +28,14 @@ function Buynow() {
   const [mobile, setMobile] = useState("");
   const [door, setDoor] = useState("");
   const [address, setAddress] = useState("");
-  const [date,setDate] = useState();
-
-  useEffect(() => {
+  const date = useState(() => {
     const dates = new Date();
-      const d =
+    const d =
       dates.getDate() + "/" +
       (dates.getMonth() + 1) + "/" +
       dates.getFullYear()
-  
-    setDate(d)
-  },[]);
+    return d;
+  })[0];
 
   function handleOrder() {
 
