@@ -54,7 +54,7 @@ function Navbar() {
           
           <ul>
             <div className="cart-notife">
-            <li> <Link to="/Cart"><i className="bi bi-cart-check">
+            <li> <Link to="/Cart"><i className="bi bi-cart-check"> 
 
              
 
