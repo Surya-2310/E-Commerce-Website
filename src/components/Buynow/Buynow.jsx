@@ -107,7 +107,6 @@ function Buynow() {
           onChange={(e) => setAddress(e.target.value)}
         />
 
-       
 
       </div>
 

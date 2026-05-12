@@ -18,7 +18,8 @@ function Navbar() {
       .catch((err) => console.log(err));
   }, []);
 
-  function Dropdowns() {
+  function Dropdowns(e) {
+    e.stopPropagation(); 
     setShow(!show);
   }
 
@@ -32,7 +33,7 @@ function Navbar() {
 
   return (
     <div>
-      <div className="navbar">
+      <div className="navbar" onClick={() => setShow(false)}>
       
          <div className="web-name">
           <h2> Smart Shopy</h2>
@@ -40,16 +41,11 @@ function Navbar() {
 
         <ul>
           <li> <Link to="/">Home</Link> </li>
-          <li><Link to="/Orders">Orders</Link></li>
-          <li> <Link to="/Signup"  onClick={() => setShow(false)}> Signup </Link> </li>
+          
+          <li> <Link to="/Signup"> Signup </Link> </li>
           <li><Link to="/About">About</Link></li>
           <li><Link to="/Contact">Contact </Link></li>
          
-          {role === "Admin" && (
-            <>
-             <li> <Link to="/Dashboard"> Dashboard</Link> </li>
-             </>
-              )}         
         </ul>
 
    
@@ -59,8 +55,17 @@ function Navbar() {
           <ul>
             <div className="cart-notife">
             <li> <Link to="/Cart"><i className="bi bi-cart-check">
-              <span>{total}</span>
-              </i></Link>
+
+             
+
+                {total> 0 && (
+                    <div className="cart-count">
+                    <span>{total}</span>
+                    </div>
+                  )}
+              </i>
+              
+              </Link>
                </li>
                </div>
             <i className="bi bi-person-circle" onClick={Dropdowns}></i>  
@@ -69,6 +74,13 @@ function Navbar() {
 
             <div className="dropdown-content">
               <li>
+                <li><Link to="/Orders">My Orders</Link></li>
+
+                 {role === "Admin" && (
+            
+                 <li> <Link to="/Dashboard"> Dashboard</Link> </li>
+            
+              )}         
                 <Link to="/" onClick={() => { handleLogout(); setShow(false); }}>
                   Logout
                 </Link>

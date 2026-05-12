@@ -34,7 +34,7 @@ function Routes() {
                   { path: "login", element: <Login /> },
                   { path: "signup", element: <Signup /> },
                   { path: "Contact", element: <Contact /> },
-                    { path:"*", element: <NotFound/>},
+                  { path:"*", element: <NotFound/>},
 
                 ] },
 
